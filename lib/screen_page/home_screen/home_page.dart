@@ -31,7 +31,7 @@ class HomePageActivity extends StatelessWidget {
                         "Salatiga City, Central Java",
                         style: myTextStyle,
                       ),
-                      Icon(Icons.keyboard_arrow_down_sharp),
+                      const Icon(Icons.keyboard_arrow_down_sharp),
                     ],
                   ),
                 ],
@@ -41,7 +41,7 @@ class HomePageActivity extends StatelessWidget {
                   SvgPicture.asset(
                     MyImage.cartIcon,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 8,
                   ),
                   SvgPicture.asset(
@@ -61,7 +61,7 @@ class HomePageActivity extends StatelessWidget {
               decoration: BoxDecoration(
                 color: MyColor.whiteColor,
                 borderRadius: BorderRadius.circular(10),
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(blurRadius: 0.0001),
                 ],
               ),
@@ -79,7 +79,7 @@ class HomePageActivity extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             SingleChildScrollView(
@@ -87,7 +87,7 @@ class HomePageActivity extends StatelessWidget {
               child: Row(
                 children: [
                   Container(
-                    margin: EdgeInsets.all(10),
+                    margin: const EdgeInsets.all(10),
                     height: 144,
                     width: 304,
                     decoration: BoxDecoration(
@@ -109,7 +109,7 @@ class HomePageActivity extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.all(10),
+              margin: const EdgeInsets.all(10),
               child: Row(
                 children: [
                   Text("Category",
@@ -128,14 +128,14 @@ class HomePageActivity extends StatelessWidget {
               ],
             ),
             Container(
-              margin: EdgeInsets.all(10),
+              margin: const EdgeInsets.all(10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("Recent Product",
                       style: myTextStyle.copyWith(fontWeight: FontWeight.bold)),
                   Container(
-                    padding: EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(5),
                     height: 27,
                     width: 78,
                     decoration: BoxDecoration(

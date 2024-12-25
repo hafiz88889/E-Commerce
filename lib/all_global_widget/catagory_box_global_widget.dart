@@ -18,15 +18,10 @@ class CategoryWidget extends StatelessWidget{
       width: 57,
       height: 61,
       margin: const EdgeInsets.symmetric(vertical: 5,horizontal: 10),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8),
-          image: DecorationImage(image: AssetImage(assetImage)),
-          color: MyColor.whiteColor
-      ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.end,
         children: [
+          Image(image: AssetImage(assetImage)),
+          SizedBox(height: 3,),
           Text(title,style: mySecondTextStyle,)
         ],
       ),

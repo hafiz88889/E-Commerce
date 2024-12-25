@@ -19,4 +19,9 @@ class MyImage{
   static String notificationIcon= "assets/icons/Notification.svg";
   static String searchIcon= "assets/icons/Search.svg";
   static String filterIcon= "assets/icons/Filter 2.svg";
+  static String closeIcon= "assets/icons/close_icon.svg";
+  static String homeIcon= "assets/images/Homeicon.png";
+  static String profileIcon= "assets/images/Profile.png";
+  static String historyIcon= "assets/images/Paper.png";
+  static String loveIcon= "assets/images/Heart.png";
 }

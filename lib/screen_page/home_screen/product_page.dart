@@ -42,8 +42,11 @@ class _ProductPageState extends State<ProductPage> {
                   prefixIcon: SizedBox(
                     height: 15,
                     width: 15,
-                    child: SvgPicture.asset(
-                      MyImage.searchIcon,
+                    child: Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: SvgPicture.asset(
+                        MyImage.searchIcon,
+                      ),
                     ),
                   ),
                 ),

@@ -41,8 +41,11 @@ class _SearchPageState extends State<SearchPage> {
                   prefixIcon: SizedBox(
                     height: 15,
                     width: 15,
-                    child: SvgPicture.asset(
-                      MyImage.searchIcon,
+                    child: Padding(
+                      padding: const EdgeInsets.all(3),
+                      child: SvgPicture.asset(
+                        MyImage.searchIcon,
+                      ),
                     ),
                   ),
                 ),

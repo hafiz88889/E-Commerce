@@ -10,9 +10,13 @@ import 'package:shopping/utils/my_color.dart';
 import 'package:shopping/utils/my_image.dart';
 import 'package:shopping/utils/my_text_style.dart';
 
-class HomePageActivity extends StatelessWidget {
+class HomePageActivity extends StatefulWidget {
   const HomePageActivity({super.key});
 
+  @override
+  State<HomePageActivity> createState() => _HomePageActivityState();
+}
+class _HomePageActivityState extends State<HomePageActivity> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,8 +104,11 @@ class HomePageActivity extends StatelessWidget {
                             MaterialPageRoute(
                                 builder: (context) => const SearchPage()));
                       },
-                      child: SvgPicture.asset(
-                        MyImage.searchIcon,
+                      child: Padding(
+                        padding: const EdgeInsets.all(4),
+                        child: SvgPicture.asset(
+                          MyImage.searchIcon,
+                        ),
                       ),
                     ),
                   ),
@@ -234,6 +241,8 @@ class HomePageActivity extends StatelessWidget {
               ],
             )
           ],
-        )));
+        )
+        )
+    );
   }
 }

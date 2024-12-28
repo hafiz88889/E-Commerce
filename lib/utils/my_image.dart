@@ -24,4 +24,9 @@ class MyImage{
   static String profileIcon= "assets/images/Profile.png";
   static String historyIcon= "assets/images/Paper.png";
   static String loveIcon= "assets/images/Heart.png";
+  static String visaIcon= "assets/images/visaicon.png";
+  static String masteCardIcon= "assets/images/mastercardicon.png";
+  static String cardIcon= "assets/images/cardIcon.png";
+  static String deletIcon= "assets/images/deleticon.png";
+  static String verificationIcon= "assets/images/verificaionicon.png";
 }

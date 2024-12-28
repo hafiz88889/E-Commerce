@@ -124,10 +124,10 @@ class DetailsPage extends StatelessWidget {
                     children: [
                       const SizedBox(height: 15),
                       Text(
-                        "Apple Strore",
+                        "Apple Store",
                         style: myTextStyle.copyWith(fontSize: 16),
                       ),
-                      Text("online 12 mins ago", style: mySecondTextStyle),
+                      Text("online 12 min ago", style: mySecondTextStyle),
                     ],
                   ),
                   const Spacer(),
@@ -165,7 +165,7 @@ class DetailsPage extends StatelessWidget {
                     RichText(
                       text: TextSpan(
                           text:
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet arcu id tincidunt tellus arcu rhoncus, turpis nisl sed. Neque viverra ipsum orci, morbi semper. Nulla bibendum purus tempor semper purus. Ut curabitur platea sed blandit. Amet non at proin justo nulla et. A, blandit morbi suspendisse vel malesuada purus massa mi. Faucibus neque a mi hendrerit.",
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquot arc id incident tells arcu rhoncus, turpis nisl sed. Neque viverra ipsum orci, morbi semper. Nulla bibendum purus tempor semper purus. Ut curabitur platea sed blandit. Amet non at proin justo nulla et. A, blandit morbi suspendisse vel malesuada purus massa mi. Faucibus neque a mi hendrerit.",
                           style: mySecondTextStyle.copyWith(
                               color: MyColor.textColor),
                           children: [

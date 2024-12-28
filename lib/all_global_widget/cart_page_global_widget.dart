@@ -27,7 +27,10 @@ class _CartPageWidgetState extends State<CartPageWidget> {
          margin:const EdgeInsets.all(10),
          child: Row(
            children: [
-             Checkbox(value: _value, onChanged: (value){
+             Checkbox(
+                 //fillColor: WidgetStateProperty.all(MyColor.buttonColor),
+               activeColor: MyColor.buttonColor,
+                 value: _value, onChanged: (value){
                  setState(() {
                    _value=value!;
                  });

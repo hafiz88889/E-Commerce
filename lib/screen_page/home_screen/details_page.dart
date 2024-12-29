@@ -14,6 +14,7 @@ class DetailsPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: MyColor.whiteColor,
       appBar: AppBar(
+        backgroundColor: MyColor.whiteColor,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -133,13 +134,15 @@ class DetailsPage extends StatelessWidget {
                   const Spacer(),
                   SizedBox(
                     width: 107,
-                    child: ElevatedButton(
+                    child: OutlinedButton(
                         style: ButtonStyle(
                           backgroundColor:
                               WidgetStateProperty.all(MyColor.whiteColor),
                           shape: WidgetStateProperty.all(RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5),
-                              side: BorderSide(color: MyColor.textColor))),
+                              side: BorderSide(color: MyColor.textColor)
+                          )
+                          ),
                         ),
                         onPressed: () {},
                         child: Text(

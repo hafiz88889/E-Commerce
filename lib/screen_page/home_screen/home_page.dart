@@ -66,13 +66,13 @@ class _HomePageActivityState extends State<HomePageActivity> {
           ),
         ),
         bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+            selectedItemColor: MyColor.buttonColor,
             items: [
               BottomNavigationBarItem(icon: Image(image: AssetImage(MyImage.homeIcon),height: 24,width: 24,),label: "Home"),
               BottomNavigationBarItem(icon: Image(image: AssetImage(MyImage.loveIcon),height: 24,width: 24,),label: "Wishlist"),
               BottomNavigationBarItem(icon: Image(image: AssetImage(MyImage.historyIcon),height: 24,width: 24,),label: "History"),
               BottomNavigationBarItem(icon: Image(image: AssetImage(MyImage.profileIcon),height: 24,width: 24,),label: "Profile"),
-
-
             ]
         ),
         body: SingleChildScrollView(

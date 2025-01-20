@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:shopping/all_global_widget/catagory_box_global_widget.dart';
 import 'package:shopping/all_global_widget/recent_product_card_widget.dart';
-import 'package:shopping/screen_page/home_screen/cart_page.dart';
-import 'package:shopping/screen_page/home_screen/details_page.dart';
-import 'package:shopping/screen_page/home_screen/product_page.dart';
-import 'package:shopping/screen_page/home_screen/search_page.dart';
+import 'package:shopping/screen_page/all_screen/cart_page.dart';
+import 'package:shopping/screen_page/all_screen/details_page.dart';
+import 'package:shopping/screen_page/all_screen/product_page.dart';
+import 'package:shopping/screen_page/all_screen/search_page.dart';
 import 'package:shopping/utils/my_color.dart';
 import 'package:shopping/utils/my_image.dart';
 import 'package:shopping/utils/my_text_style.dart';
@@ -22,6 +22,8 @@ class _HomePageActivityState extends State<HomePageActivity> {
     return Scaffold(
         backgroundColor: MyColor.whiteColor,
         appBar: AppBar(
+          automaticallyImplyLeading: false,
+          scrolledUnderElevation: 0,
           backgroundColor: MyColor.whiteColor,
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

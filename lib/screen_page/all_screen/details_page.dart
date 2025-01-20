@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shopping/all_global_widget/color_button_widget.dart';
-import 'package:shopping/screen_page/home_screen/cart_page.dart';
+import 'package:shopping/screen_page/all_screen/cart_page.dart';
 import 'package:shopping/utils/my_color.dart';
 import 'package:shopping/utils/my_image.dart';
 import 'package:shopping/utils/my_text_style.dart';
@@ -14,6 +14,7 @@ class DetailsPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: MyColor.whiteColor,
       appBar: AppBar(
+        scrolledUnderElevation: 0,
         backgroundColor: MyColor.whiteColor,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

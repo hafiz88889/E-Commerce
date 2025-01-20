@@ -18,6 +18,7 @@ class _SearchPageState extends State<SearchPage> {
     return Scaffold(
       backgroundColor: MyColor.whiteColor,
       appBar: AppBar(
+        scrolledUnderElevation: 0,
         backgroundColor: MyColor.whiteColor,
         title:Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

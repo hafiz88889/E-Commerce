@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shopping/all_global_widget/payment_method_small_box_widget.dart';
 import 'package:shopping/all_global_widget/payment_metod_page_widget.dart';
-import 'package:shopping/screen_page/home_screen/payment_complete_page.dart';
+import 'package:shopping/screen_page/all_screen/home_page.dart';
 import 'package:shopping/utils/my_color.dart';
 import 'package:shopping/utils/my_image.dart';
 import 'package:shopping/utils/my_text_style.dart';
@@ -20,6 +20,7 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
     return Scaffold(
       backgroundColor: MyColor.whiteColor,
       appBar: AppBar(
+        scrolledUnderElevation: 0,
         backgroundColor: MyColor.whiteColor,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -30,6 +31,77 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
             ),
             SvgPicture.asset(MyImage.cartIcon),
           ],
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: SizedBox(
+          height: 50,
+          child: ElevatedButton(
+              style: ButtonStyle(
+                  shape: WidgetStateProperty.all(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8))),
+                  backgroundColor:
+                  WidgetStateProperty.all(MyColor.buttonColor)),
+              onPressed: () {
+                showModalBottomSheet<Null>(context: context, builder: (BuildContext contex){
+                  return   Container(
+                    height: 1000,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                        borderRadius: const BorderRadius.only(
+                            topRight: Radius.circular(40),
+                            topLeft: Radius.circular(40)),
+                        color: MyColor.whiteColor),
+                    child: Column(
+                      children: [
+                        const SizedBox(
+                          height: 50,
+                        ),
+                        Image(
+                          image: AssetImage(MyImage.verificationIcon),
+                          height: 100,
+                          width: 100,
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Text(
+                          "Congrats! your payment \n         is successfully",
+                          style: myTextStyle.copyWith(fontSize: 20),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          "Track your order or just chat directly to the \nseller. Download order summery in down below  ",
+                          style: mySecondTextStyle.copyWith(fontSize: 14),
+                        ),
+                        SizedBox(
+                          height: 50,
+                          width: 350,
+                          child: ElevatedButton(
+                              style: ButtonStyle(
+                                  shape: WidgetStateProperty.all(RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(8))),
+                                  backgroundColor: WidgetStateProperty.all(MyColor.buttonColor)
+                              ),
+                              onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>const HomePageActivity()));
+                              },
+                              child: Text("Back to home",style: myTextStyle.copyWith(color: MyColor.whiteColor),)),
+                        )
+                      ],
+                    ),
+                  );
+                });
+                //Navigator.push(context, MaterialPageRoute(builder: (context)=>const PaymentCompletePage()));
+              },
+              child: Text(
+                "Continue",
+                style: myTextStyle.copyWith(color: MyColor.whiteColor),
+              )
+          ),
         ),
       ),
       body: SingleChildScrollView(
@@ -103,34 +175,11 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
                           ),
                         ],
                       ),
-                      const SizedBox(height: 10,),
-                      SizedBox(
-                        height: 50,
-                        width: 350,
-                        child: ElevatedButton(
-                            style: ButtonStyle(
-                                shape: WidgetStateProperty.all(RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(8))),
-                                backgroundColor:
-                                WidgetStateProperty.all(MyColor.buttonColor)),
-                            onPressed: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>const PaymentCompletePage()));
-                            },
-                            child: Text(
-                              "Continue",
-                              style: myTextStyle.copyWith(color: MyColor.whiteColor),
-                            )
-                        ),
-                      ),
                     ],
                   ),
                 ),
           ],
         ),
-
-
-        //   ],
-        // ),
       ),
     );
   }

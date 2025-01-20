@@ -37,7 +37,7 @@ class CardSecondPage extends StatelessWidget{
                 //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(title7,style: myTextStyle.copyWith(fontSize: 18),),
-                 const  SizedBox(width: 120,),
+                 const  SizedBox(width: 100,),
                   Text(title8,style: mySecondTextStyle.copyWith(fontSize: 12),),
                   const  SizedBox(width: 15,),
                 ],

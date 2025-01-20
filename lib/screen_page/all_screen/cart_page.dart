@@ -33,6 +33,24 @@ class _CartPageState extends State<CartPage> {
           ],
         ),
       ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: SizedBox(
+          height: 50,
+          child: ElevatedButton(
+            style: ButtonStyle(shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))),
+            backgroundColor: WidgetStateProperty.all(MyColor.buttonColor)
+            ),
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>const CheckoutPageOne()));
+            },
+            child: Text(
+              "Continue for Payment",
+              style: myTextStyle.copyWith(color: MyColor.whiteColor),
+            ),
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -81,6 +99,17 @@ class _CartPageState extends State<CartPage> {
               margin: const EdgeInsets.all(10),
               child: Column(
                 children: [
+                  const SizedBox(height: 140,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Order Summery",
+                        style: myTextStyle.copyWith(fontSize: 18),
+                      ),
+                      const Icon(Icons.keyboard_arrow_up),
+                    ],
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -94,21 +123,6 @@ class _CartPageState extends State<CartPage> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 10,),
-                  SizedBox(
-                    height: 50,
-                    width: 350,
-                    child: ElevatedButton(
-                      style: ButtonStyle(shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)))),
-                      onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const CheckoutPageOne()));
-                      },
-                      child: Text(
-                        "Continue for Payment",
-                        style: myTextStyle,
-                      ),
-                    ),
-                  )
                 ],
               ),
             )

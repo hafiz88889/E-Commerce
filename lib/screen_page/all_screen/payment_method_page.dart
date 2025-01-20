@@ -77,6 +77,7 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
                           "Track your order or just chat directly to the \nseller. Download order summery in down below  ",
                           style: mySecondTextStyle.copyWith(fontSize: 14),
                         ),
+                        const SizedBox(height: 150,),
                         SizedBox(
                           height: 50,
                           width: 350,

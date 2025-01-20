@@ -30,7 +30,11 @@ class _CheckoutPageOneState extends State<CheckoutPageOne> {
                   backgroundColor:
                   WidgetStateProperty.all(MyColor.buttonColor)),
               onPressed: () {
-               showModalBottomSheet(context: context, builder: (BuildContext contex){
+               showModalBottomSheet(
+                   backgroundColor: MyColor.whiteColor,
+                   //isScrollControlled: true,
+
+                   context: context, builder: (BuildContext contex){
                  return  Padding(
                    padding: const EdgeInsets.all(12.0),
                    child: Column(
@@ -53,6 +57,7 @@ class _CheckoutPageOneState extends State<CheckoutPageOne> {
                            title1: "Express",
                            title2: "1-3 days delivey ",
                            title3: "\$14.99"),
+
                        InkWell(
                          onTap: (){
                            Navigator.push(context, MaterialPageRoute(builder: (contex)=>const TotalPricePage()));
@@ -97,103 +102,100 @@ class _CheckoutPageOneState extends State<CheckoutPageOne> {
         ),
       ),
       body:SingleChildScrollView(
-        child:  Column(
-          children: [
-            Container(
-              margin: const EdgeInsets.all(10),
-              child: Row(
+        child:  Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            children: [
+              Container(
+                margin: const EdgeInsets.all(10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Delivery To",
+                      style: myTextStyle,
+                    ),
+                    const Spacer(),
+                    Text(
+                      "Mirpur,Dhaka -1216",
+                      style: myTextStyle,
+                    ),
+                    const Icon(Icons.keyboard_arrow_down_sharp),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              CardSecondPage(
+                  assetImage: MyImage.earphoneBig,
+                  title5: "Airpod Max by Apple",
+                  title6: "Variant: Gray",
+                  title7: "\$199.99",
+                  title8: "1 Quantity"),
+              CardSecondPage(
+                  assetImage: MyImage.monitor,
+                  title5: "LG Led Monitor 32 Inch Display",
+                  title6: "Variant: Black",
+                  title7: "\$199.99",
+                  title8: "1 Quantity"),
+              CardSecondPage(
+                  assetImage: MyImage.airpod1,
+                  title5: "Hign Quality Airpod",
+                  title6: "Variant: White",
+                  title7: "\$199.99",
+                  title8: "1 Quantity"),
+              Text(
+                "Hide list",
+                style: myTextStyle.copyWith(color: MyColor.buttonColor),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const DeliveryBoxWidget(title1: "Ente the delivery address"),
+              const SizedBox(
+                height: 50,
+              ),
+              const  DeliveryBoxWidget(title1: "apply discount "),
+              const SizedBox(height: 70,),
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Delivery To",
-                    style: myTextStyle,
+                    "Order Summery",
+                    style: myTextStyle.copyWith(fontSize: 18),
                   ),
-                  const Spacer(),
-                  Text(
-                    "Mirpur,Dhaka -1216",
-                    style: myTextStyle,
-                  ),
-                  const Icon(Icons.keyboard_arrow_down_sharp),
+                  const Icon(Icons.keyboard_arrow_up),
                 ],
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            CardSecondPage(
-                assetImage: MyImage.earphoneBig,
-                title5: "Airpod Max by Apple",
-                title6: "Variant: Gray",
-                title7: "\$199.99",
-                title8: "1 Quantity"),
-            CardSecondPage(
-                assetImage: MyImage.monitor,
-                title5: "LG Led Monitor 32 Inch Display",
-                title6: "Variant: Black",
-                title7: "\$199.99",
-                title8: "1 Quantity"),
-            CardSecondPage(
-                assetImage: MyImage.airpod1,
-                title5: "Hign Quality Airpod",
-                title6: "Variant: White",
-                title7: "\$199.99",
-                title8: "1 Quantity"),
-            Text(
-              "Hide list",
-              style: myTextStyle.copyWith(color: MyColor.buttonColor),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            const DeliveryBoxWidget(title1: "Ente the delivery address"),
-            const SizedBox(
-              height: 50,
-            ),
-            const  DeliveryBoxWidget(title1: "apply discount "),
-            Container(
-              margin: const EdgeInsets.all(10),
-              child: Column(
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Order Summery",
-                        style: myTextStyle.copyWith(fontSize: 18),
-                      ),
-                      const Icon(Icons.keyboard_arrow_up),
-                    ],
+                  Text(
+                    "Total Price (3 items)",
+                    style: mySecondTextStyle.copyWith(fontSize: 16),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Total Price (3 items)",
-                        style: mySecondTextStyle.copyWith(fontSize: 16),
-                      ),
-                      Text(
-                        "\$2499.97",
-                        style: mySecondTextStyle.copyWith(fontSize: 16),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Totals",
-                        style: mySecondTextStyle.copyWith(fontSize: 16),
-                      ),
-                      Text(
-                        "\$2499.97",
-                        style: mySecondTextStyle.copyWith(fontSize: 16),
-                      ),
-                    ],
+                  Text(
+                    "\$2499.97",
+                    style: mySecondTextStyle.copyWith(fontSize: 16),
                   ),
                 ],
               ),
-            )
-          ],
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Totals",
+                    style: mySecondTextStyle.copyWith(fontSize: 16),
+                  ),
+                  Text(
+                    "\$2499.97",
+                    style: mySecondTextStyle.copyWith(fontSize: 16),
+                  ),
+                ],
+              )
+            ],
+          ),
         ),
       )
     );
